@@ -1,9 +1,10 @@
+var express = require('express');
+var app = express();
 
-const http = require('http');
+app.get('/', function(req, res) {
+  res.send('HOLA ESTAS EJECUTANDO EL PROYECTO NUMERO 1 :)!');
+});
 
-const server = http.createServer((req, res) =>{
-    res.end('PROJECT 01:  HELLO :)')
-})
-
-server.listen(3000);
-console.log('server on port 3000');
+app.listen(3000, function() {
+  console.log('Aplicación ejemplo, escuchando el puerto 3000!');
+});
